@@ -19,4 +19,6 @@ RUN dotnet publish "TeamWatchAPI.csproj" -c Release -o /app/publish /p:UseAppHos
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+
+ENV ASPNETCORE_ENVIRONMENT Development
 ENTRYPOINT ["dotnet", "TeamWatchAPI.dll"]
