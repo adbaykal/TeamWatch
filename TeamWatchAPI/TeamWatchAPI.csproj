@@ -19,4 +19,10 @@
     <ProjectReference Include="..\TeamWatch.Domain\TeamWatch.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Dockerfile">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
