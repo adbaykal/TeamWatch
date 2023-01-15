@@ -10,8 +10,13 @@ namespace TeamWatchAPI.Controllers
     public class SlackController : ControllerBase
     {
         // GET: api/<SlackController>
-        [HttpPost]
+        [
+            HttpPost,
+            Consumes("application/x-www-form-urlencoded"),
+            Produces("application/json")
+        ]
         [Route("command")]
+
         public SlackResponseDTO CommandWebhook(SlackCommandDTO commandDto)
         {
             var response = new SlackResponseDTO();
