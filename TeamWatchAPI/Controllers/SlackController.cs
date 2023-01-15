@@ -17,7 +17,7 @@ namespace TeamWatchAPI.Controllers
         ]
         [Route("command")]
 
-        public SlackResponseDTO CommandWebhook(SlackCommandDTO commandDto)
+        public SlackResponseDTO CommandWebhook([FromForm] SlackCommandDTO commandDto)
         {
             var response = new SlackResponseDTO();
 
